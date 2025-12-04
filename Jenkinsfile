@@ -1,8 +1,8 @@
 pipeline {
   agent any
   environment {
-    REPO_NAME = 'abhiramapp/javawebapp'
-    REMOTE_SERVER = 'Paste-your-server-ip'
+    REPO_NAME = 'Abhiram303/Javawebapp-Docker_image-Pipeline'
+    REMOTE_SERVER = 'your_server_IP'
     REMOTE_USER = 'ec2-user'
     APP_CONTAINER = 'javaApp'
     APP_PORT = '8081'
@@ -13,7 +13,7 @@ pipeline {
       steps {
         checkout([$class: 'GitSCM',
           branches: [[name: '*/main']],
-          userRemoteConfigs: [[url: 'https://github.com/palakbhawsar98/JavaWebApp']]
+          userRemoteConfigs: [[url: 'https://github.com/Abhiram303/Javawebapp-Docker_image-Pipeline.git']]
         ])
       }
     }
